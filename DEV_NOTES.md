@@ -36,3 +36,31 @@ weather-now/
 │ └─ WeatherNow.jsx # Core component handling search, API, and UI
 
 ```
+
+**Key points:**
+- `WeatherNow.jsx` is the main functional component.
+- `App.jsx` is minimal; it renders `<WeatherNow />`.
+- Tailwind CSS is configured in `tailwind.config.js` and imported via `index.css`.
+
+---
+
+## 3️⃣ Component Overview
+
+### App.jsx
+Simple container component.  
+Imports and renders `<WeatherNow />`.
+
+```jsx
+import WeatherNow from './components/WeatherNow';
+
+function App() {
+  return <WeatherNow />;
+}
+
+export default App;
+```
+
+
+
+
+
