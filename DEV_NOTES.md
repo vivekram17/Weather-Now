@@ -68,8 +68,8 @@ export default App;
 **Search & Geocoding**
 - User types a city name.
 - fetchCities calls Open-Meteo geocoding API:
-```curl
-https://geocoding-api.open-meteo.com/v1/search?name={CITY_NAME}&count=3
+```bash
+curl -L https://geocoding-api.open-meteo.com/v1/search?name={CITY_NAME}&count=3
 ```
 - Dropdown shows multiple city matches.
 - Selecting a city triggers weather fetch.
@@ -129,6 +129,7 @@ export default {
   - Responsive layouts (sm:, md:, lg:)
   - Flex and overflow-x-auto for horizontal scrolling
   - Rounded cards, shadows, gradients, and hover states
+
 
 
 
