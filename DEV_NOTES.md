@@ -98,7 +98,17 @@ https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&current_we
   - 3-hour horizontal scroll forecast
   - Loading skeleton & error messages
 
+### 4️⃣ State & API Flow
+  - User types city → query updates
+  - On Enter or Search button → fetchCities called
+  - Cities returned → stored in cities state → displayed in dropdown
+  - User selects city → fetchWeather called with city lat/lon
+  - Weather response stored in weather and hourlyForecast
+  - UI automatically updates based on state
+  - Loading skeleton shows when loading = true
+  - Errors captured and displayed in error state
     
+
 
 
 
