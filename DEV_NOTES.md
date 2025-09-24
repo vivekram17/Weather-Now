@@ -47,10 +47,13 @@ weather-now/
 ## 3️⃣ Component Overview
 
 ### App.jsx
-Simple container component.  
-Imports and renders `<WeatherNow />`.
 
-```jsx
+Simple container component.
+
+Imports and renders <WeatherNow />.
+
+Example:
+```bash
 import WeatherNow from './components/WeatherNow';
 
 function App() {
@@ -59,28 +62,11 @@ function App() {
 
 export default App;
 ```
-3️⃣ Component Overview
-App.jsx
+### WeatherNow.jsx
 
-Simple container component.
+**Responsibilities:**
 
-Imports and renders <WeatherNow />.
-
-Example:
-
-import WeatherNow from './components/WeatherNow';
-
-function App() {
-  return <WeatherNow />;
-}
-
-export default App;
-
-WeatherNow.jsx
-
-Responsibilities:
-
-Search & Geocoding
+***Search & Geocoding***
 
 User types a city name.
 
@@ -135,6 +121,7 @@ Current weather card
 Loading skeleton & error messages
 
     
+
 
 
 
