@@ -90,7 +90,7 @@ https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&current_we
   - hourlyForecast → array of hourly forecast data
   -loading → toggles loading skeleton
   - error → error messages
-  - 
+
 - UI Rendering
   - Search input + button
   - Dropdown for multi-city selection
@@ -109,6 +109,26 @@ https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&current_we
   - Errors captured and displayed in error state
     
 
+### 5️⃣ Tailwind CSS Setup
+
+- Installation: included in package.json
+
+- Config: tailwind.config.js
+```bash
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: { extend: {} },
+  plugins: [],
+}
+```
+- Usage:
+  - Utility-first classes directly in JSX
+  - Responsive layouts (sm:, md:, lg:)
+  - Flex and overflow-x-auto for horizontal scrolling
+  - Rounded cards, shadows, gradients, and hover states
 
 
 
