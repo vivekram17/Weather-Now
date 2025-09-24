@@ -161,6 +161,29 @@ npm run dev
 * **Jest + React Testing Library:** If the project is exported locally, automated tests can be written using these tools.
 * **Coverage:** Focus on testing the core component logic, including rendering different UI states (e.g., loading, error, and successful data display) to ensure robust behavior.
 
+### 8️⃣ Error Handling Notes
+The application includes built-in error handling to provide a better user experience. Specific messages are displayed for different types of failures:
+
+* **No Results:** If a user searches for a city that doesn't exist, the app shows the message “No cities found.”
+* **Network Error:** For issues with the user's internet connection, the message “Network error. Check your connection.” is displayed.
+* **API Failure:** If the Open-Meteo API is unavailable or returns an error, the app shows “Failed to fetch weather from Open-Meteo.”
+
+**Possible Enhancements:**
+* Implement a **"Retry" button** to allow the user to attempt the API call again without re-entering the search query.
+* **Cache** the last successful weather results to display data even if a subsequent API request fails.
+* Display **weather icons** based on the `weathercode` value returned by the API for a more intuitive and visually appealing UI.
+
+---
+
+### 9️⃣ Key Improvements / Future Enhancements
+Several improvements can be made to enhance the application's functionality and user experience:
+
+* **Add Unit Tests:** Implement comprehensive unit tests for all components using tools like Jest and React Testing Library to ensure code reliability and prevent regressions.
+* **Add Forecast Icons:** Enhance the hourly forecast by adding icons that correspond to the weather conditions (e.g., sun, clouds, rain).
+* **Allow Temperature Unit Toggle:** Provide an option for users to switch between Celsius and Fahrenheit (°C/°F).
+* **Add Geolocation Support:** Automatically detect and display the weather for the user's current location upon app load using the browser's geolocation API.
+* **Add Dark Mode / Theme Toggle:** Introduce a dark mode option to improve readability and reduce eye strain in low-light environments.
+
 
 
 
