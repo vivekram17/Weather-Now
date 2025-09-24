@@ -141,6 +141,25 @@ npm install
 npm run dev
 ```
 
+### 7️⃣ Testing
+
+#### Basic Manual QA Checklist
+* **Page Load:** Confirm that the application loads successfully without any errors.
+* **Search Input:** Test typing in various city names, including valid, invalid, and partial entries.
+* **Multi-city Dropdown:** Verify that a dropdown appears with city suggestions when the search query matches multiple locations.
+* **City Selection:** Check that selecting a city from the dropdown fetches and displays the correct weather data.
+* **Current Weather Display:** Ensure that the temperature, wind, and weather description are shown accurately for the selected city.
+* **3-Hour Forecast Scroll:** Confirm that the forecast cards for the next 12 hours are visible and can be scrolled horizontally.
+* **Loading Skeleton:** Check that a loading state (e.g., a skeleton UI) appears while data is being fetched from the API.
+* **Error Handling:** Test scenarios that should trigger an error, such as entering an invalid city name, disconnecting the network, or simulating an API failure.
+* **Mobile Responsiveness:** Resize the browser window to confirm that the layout adjusts correctly for smaller screen sizes.
+* **Fallback Behavior:** If the API fails, ensure the app displays a user-friendly error message instead of crashing.
+
+---
+
+#### Automated Tests
+* **Jest + React Testing Library:** If the project is exported locally, automated tests can be written using these tools.
+* **Coverage:** Focus on testing the core component logic, including rendering different UI states (e.g., loading, error, and successful data display) to ensure robust behavior.
 
 
 
