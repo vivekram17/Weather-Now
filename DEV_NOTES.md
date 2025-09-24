@@ -59,15 +59,83 @@ function App() {
 
 export default App;
 ```
-### WeatherNow.jsx
-**Responsibilities:**
-    **1. Search & Geocoding :**
-      - User types a city name.
-      - fetchCities calls Open-Meteo geocoding API:
-        ```js
-          https://geocoding-api.open-meteo.com/v1/search?name={CITY_NAME}&count=3
-        ```
+3️⃣ Component Overview
+App.jsx
+
+Simple container component.
+
+Imports and renders <WeatherNow />.
+
+Example:
+
+import WeatherNow from './components/WeatherNow';
+
+function App() {
+  return <WeatherNow />;
+}
+
+export default App;
+
+WeatherNow.jsx
+
+Responsibilities:
+
+Search & Geocoding
+
+User types a city name.
+
+fetchCities calls Open-Meteo geocoding API:
+
+https://geocoding-api.open-meteo.com/v1/search?name={CITY_NAME}&count=3
+
+
+Dropdown shows multiple city matches.
+
+Selecting a city triggers weather fetch.
+
+Weather Data Fetch
+
+fetchWeather calls Open-Meteo forecast API:
+
+https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,pressure_msl&daily=sunrise,sunset&timezone=auto
+
+
+Stores:
+
+weather → current weather + sunrise/sunset
+
+hourlyForecast → next 12 hours of temperature, humidity, and pressure
+
+State Management
+
+query → user input text
+
+cities → city search results
+
+selectedCity → user-chosen city
+
+weather → current weather object
+
+hourlyForecast → array of hourly forecast data
+
+loading → toggles loading skeleton
+
+error → error messages
+
+UI Rendering
+
+Search input + button
+
+Dropdown for multi-city selection
+
+Current weather card
+
+3-hour horizontal scroll forecast
+
+Loading skeleton & error messages
+
     
+
 
 
 
