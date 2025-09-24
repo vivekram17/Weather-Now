@@ -184,6 +184,13 @@ Several improvements can be made to enhance the application's functionality and 
 * **Add Geolocation Support:** Automatically detect and display the weather for the user's current location upon app load using the browser's geolocation API.
 * **Add Dark Mode / Theme Toggle:** Introduce a dark mode option to improve readability and reduce eye strain in low-light environments.
 
+### ✅ Summary
+
+The **Weather Now** application is built around the core `WeatherNow.jsx` component, which contains all the logic and UI. The state management follows a clear flow: a user's **query** updates the list of **cities**, and selecting a **selectedCity** triggers the fetch for **weather** and **hourlyForecast** data.
+
+All styling and responsive design are managed efficiently with **Tailwind CSS**. The project is fully functional in StackBlitz out-of-the-box and does not require an API key. Essential features like **error handling** and **loading states** are built-in, making the application robust.
+
+For future improvements, the app can be easily extended with new features such as **weather icons**, a **temperature unit toggle**, and **geolocation support**.
 
 
 
