@@ -69,7 +69,7 @@ export default App;
 - User types a city name.
 - fetchCities calls Open-Meteo geocoding API:
 ```bash
-curl -L https://geocoding-api.open-meteo.com/v1/search?name={CITY_NAME}&count=3
+https://geocoding-api.open-meteo.com/v1/search?name={CITY_NAME}&count=3
 ```
 - Dropdown shows multiple city matches.
 - Selecting a city triggers weather fetch.
@@ -130,7 +130,16 @@ export default {
   - Flex and overflow-x-auto for horizontal scrolling
   - Rounded cards, shadows, gradients, and hover states
 
-
+### 6️⃣ Running the Project (StackBlitz)
+- Open StackBlitz project
+- Dependencies install automatically
+- Preview shows live app
+- Manual API testing: type a city, select from dropdown, observe results
+- Optional local run (after export):
+```arduino
+npm install
+npm run dev
+```
 
 
 
