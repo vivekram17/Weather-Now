@@ -62,12 +62,13 @@ export default App;
 ### WeatherNow.jsx
 **Responsibilities:**
     **1. Search & Geocoding :**
-         - User types a city name.
-         - fetchCities calls Open-Meteo geocoding API:
+      - User types a city name.
+      - fetchCities calls Open-Meteo geocoding API:
         ```js
           https://geocoding-api.open-meteo.com/v1/search?name={CITY_NAME}&count=3
         ```
     
+
 
 
 
