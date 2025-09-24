@@ -82,35 +82,24 @@ https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&current_we
   - weather → current weather + sunrise/sunset
   - hourlyForecast → next 12 hours of temperature, humidity, and pressure
 
-State Management
-
-query → user input text
-
-cities → city search results
-
-selectedCity → user-chosen city
-
-weather → current weather object
-
-hourlyForecast → array of hourly forecast data
-
-loading → toggles loading skeleton
-
-error → error messages
-
-UI Rendering
-
-Search input + button
-
-Dropdown for multi-city selection
-
-Current weather card
-
-3-hour horizontal scroll forecast
-
-Loading skeleton & error messages
+- State Management
+  - query → user input text
+  - cities → city search results
+  - selectedCity → user-chosen city
+  - weather → current weather object
+  - hourlyForecast → array of hourly forecast data
+  -loading → toggles loading skeleton
+  - error → error messages
+  - 
+- UI Rendering
+  - Search input + button
+  - Dropdown for multi-city selection
+  - Current weather card
+  - 3-hour horizontal scroll forecast
+  - Loading skeleton & error messages
 
     
+
 
 
 
