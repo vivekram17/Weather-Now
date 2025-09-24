@@ -66,29 +66,21 @@ export default App;
 
 **Responsibilities:**
 **Search & Geocoding**
-
 - User types a city name.
 - fetchCities calls Open-Meteo geocoding API:
 ```jsx
 https://geocoding-api.open-meteo.com/v1/search?name={CITY_NAME}&count=3
 ```
-
-Dropdown shows multiple city matches.
-
-Selecting a city triggers weather fetch.
-
-Weather Data Fetch
-
-fetchWeather calls Open-Meteo forecast API:
-
+- Dropdown shows multiple city matches.
+- Selecting a city triggers weather fetch.
+**Weather Data Fetch**
+- fetchWeather calls Open-Meteo forecast API:
+```bash
 https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,pressure_msl&daily=sunrise,sunset&timezone=auto
-
-
-Stores:
-
-weather → current weather + sunrise/sunset
-
-hourlyForecast → next 12 hours of temperature, humidity, and pressure
+```
+- Stores:
+  - weather → current weather + sunrise/sunset
+  - hourlyForecast → next 12 hours of temperature, humidity, and pressure
 
 State Management
 
@@ -119,6 +111,7 @@ Current weather card
 Loading skeleton & error messages
 
     
+
 
 
 
