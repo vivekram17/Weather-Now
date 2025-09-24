@@ -192,8 +192,52 @@ All styling and responsive design are managed efficiently with **Tailwind CSS**.
 
 For future improvements, the app can be easily extended with new features such as **weather icons**, a **temperature unit toggle**, and **geolocation support**.
 
+### 🔄 State & API Flow Diagram
 
+```bash
+[User Input: City Name]
+      │
+      ▼
+┌─────────────────┐
+│   query state   │
+└─────────────────┘
+      │
+      ▼
+[fetchCities → Open-Meteo Geocoding]
+      │
+      ├── Success → store in
+      ▼
+┌─────────────────┐
+│   cities state  │
+└─────────────────┘
+      │
+      ▼
+[User selects city]
+      │
+      ▼
+┌───────────────────────────┐
+│    selectedCity state     │
+└───────────────────────────┘
+      │
+      ▼
+[fetchWeather → Open-Meteo Forecast]
+      │
+      ├── Success → extract:
+      │   - Current weather → weather state
+      │   - Hourly forecast → hourlyForecast state
+      │
+      └── Failure → set error state
+      │
+      ▼
+┌───────────────────────────┐
+│   UI Updates Automatically│
+│   - Weather card          │
+│   - 3-hour forecast scroll│
+│   - Sunrise/Sunset info   │
+│   - Error messages        │
+└───────────────────────────┘
 
+```
 
 
 
